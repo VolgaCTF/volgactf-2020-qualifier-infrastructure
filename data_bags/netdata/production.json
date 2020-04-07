@@ -1,0 +1,10 @@
+{
+  "id": "production",
+  "stream": {
+    "encrypted_data": "9ZmNdf3bz53viLuuVHmXl8jWTz1FJRRyIfW/dmEVYECo6xczUCDANki8JocL\nGdJpo0exbmZtGnL5m+8iCCCvtXF+8EU3HzufNi8AWXQ=\n",
+    "iv": "l5MmQWCQ0uleTrN6\n",
+    "auth_tag": "8giEq89SPexQfJn8F+jCmg==\n",
+    "version": 3,
+    "cipher": "aes-256-gcm"
+  }
+}

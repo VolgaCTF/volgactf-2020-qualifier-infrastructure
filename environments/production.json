@@ -1,0 +1,65 @@
+{
+  "name": "production",
+  "default_attributes": {
+    "fail2ban": {
+      "enabled": true,
+      "destemail": "aspyatkin@gmail.com",
+      "sender": "operator@srvr.work",
+      "sendername": "Fail2Ban Operator",
+      "jail": {
+        "sshd": {
+          "enabled": true,
+          "maxretry": 5,
+          "findtime": 259200,
+          "bantime": 86400
+        }
+      }
+    },
+    "firewall": {
+      "ubuntu_iptables": true,
+      "allow_loopback": true,
+      "allow_ssh": true,
+      "allow_icmp": true,
+      "ipv6_enabled": false
+    },
+    "ngx": {
+      "version": "1.17.8",
+      "checksum": "97d23ecf6d5150b30e284b40e8a6f7e3bb5be6b601e373a4d013768d5a25965b"
+    },
+    "nodejs": {
+      "version": "12.9.0",
+      "binary": {
+        "checksum": {
+          "linux_x64": "3991e5b65fbaab8d70cda813b9bc73dd3b4201aeef42bcb1c000a03869aa0610"
+        }
+      }
+    },
+    "ntp": {
+      "servers": [
+        "0.pool.ntp.org",
+        "1.pool.ntp.org",
+        "2.pool.ntp.org",
+        "3.pool.ntp.org"
+      ]
+    },
+    "openssl": {
+      "version": "1.1.1d",
+      "checksum": "1e3a91bc1f9dfce01af26026f856e064eab4c8ee0a8f457b5ae30b40b8b711f2"
+    },
+    "postgresql": {
+      "version": "12"
+    },
+    "redisio": {
+      "version": "5.0.7"
+    },
+    "ssmtp": {
+      "sender_email": "operator@srvr.work",
+      "smtp_host": "email-smtp.us-east-1.amazonaws.com",
+      "smtp_port": 465,
+      "smtp_username": "AKIAXVVRQZBGYH6SI7WA",
+      "smtp_enable_ssl": true,
+      "smtp_enable_starttls": false,
+      "from_line_override": true
+    }
+  }
+}

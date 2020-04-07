@@ -1,0 +1,10 @@
+{
+  "id": "production",
+  "oscar.srvr.volgactf.org": {
+    "encrypted_data": "ciOTKGh+nLgCd4x0OUja0ViiKMbRtMAg5mZa287yVlIjz8eNdEEm3+j+4hq8\nBnColTanbtfadQyTPPsomD58lISD8uQVL0l5vTR9tqGEKLpiEVQnAUEC/ceM\nXJMA2d8E/XIKPNVY\n",
+    "iv": "o7WYfx0JjJucamA/\n",
+    "auth_tag": "Fk1LIk7w/ny+o13NvlpH5g==\n",
+    "version": 3,
+    "cipher": "aes-256-gcm"
+  }
+}

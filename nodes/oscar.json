@@ -1,0 +1,80 @@
+{
+  "name": "oscar",
+  "chef_environment": "production",
+  "normal": {
+    "knife_zero": {
+      "host": "oscar.srvr.volgactf.org"
+    },
+    "netdata": {
+      "slave": {
+        "enabled": true,
+        "stream": {
+          "name": "oscar",
+          "destination": "51.158.127.137"
+        }
+      }
+    },
+    "volgactf": {
+      "qualifier": {
+        "fqdn": "q.2020.volgactf.ru",
+        "secure": true,
+        "oscp_stapling": true,
+        "optimize_delivery": true,
+        "email": {
+          "transport": "smtp",
+          "address_validator": "none",
+          "address_validator_ignore_list": [
+            "itsec-ctf@fh-campuswien.ac.at",
+            "poc.volgactf2020@hgbsec.at",
+            "mslc@ctf.su"
+          ],
+          "sender_name": "VolgaCTF 2020 Qualifier",
+          "sender_address": "noreply@volgactf.ru"
+        },
+        "customizers": {
+          "volgactf-2020-qualifier-theme": {
+            "repo_id": "VolgaCTF/volgactf-2020-qualifier-theme",
+            "repo_revision": "master"
+          }
+        },
+        "customizer_name": "volgactf-2020-qualifier-theme",
+        "cleanup_upload_dir": {
+          "enabled": true,
+          "cron": {
+            "mailto": "aspyatkin@gmail.com",
+            "mailfrom": "operator@srvr.work",
+            "minute": "*/10"
+          }
+        },
+        "backup": {
+          "enabled": true,
+          "cron": {
+            "mailto": "aspyatkin@gmail.com",
+            "mailfrom": "operator@srvr.work",
+            "minute": "0",
+            "hour": "*/3"
+          }
+        },
+        "smtp": {
+          "host": "email-smtp.us-east-1.amazonaws.com",
+          "port": 465,
+          "secure": true,
+          "username": "AKIAXVVRQZBGYH6SI7WA",
+          "headers": {
+            "X-SES-CONFIGURATION-SET": "volgactf_ru_track"
+          }
+        },
+        "notification_post_twitter": true,
+        "notification_post_telegram": true,
+        "num_processes_server": 6,
+        "num_processes_queue": 6
+      }
+    }
+  },
+  "automatic": {
+    "fqdn": "oscar.srvr.volgactf.org"
+  },
+  "run_list": [
+    "recipe[volgactf-qualifier-main::qualifier_server]"
+  ]
+}

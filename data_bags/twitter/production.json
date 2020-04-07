@@ -1,0 +1,10 @@
+{
+  "id": "production",
+  "oscar.srvr.volgactf.org": {
+    "encrypted_data": "IHBruz4VNDjv9QWf/ZGV47yVlJ0DqX7fX9f1DIzZxIb3Xu5PbiD4n2D8yOmx\nluGn17yPgf+sE/y+TEkPmrvl1gQotqDHnjMtBzvRe+qG0N0NIzIUPquymiBH\n6e67MfefJnQNoArMbwsdE2I304ZE7nqUagrCO2tHQaTud8AspzfUDG5Psg3w\n6kEUovG84zWQPQf669urIybHgm5uOVJsU7VCl67YUmj4MYMz9HNCtKOEYwBC\nJMPvkjQmP5rQcmWrugc3h1w76iL1EgbOay+cRJA2MdQJfzbRlhFibpreMxKw\nCI4AIwe1ysGGVquQ+0EwghMtcDyv+Ynvn/hX/AzIX4f+JXDSqmctyeEUw39B\n",
+    "iv": "dOzFOl7TyuOCc+Ff\n",
+    "auth_tag": "aJ8oItEXV4Y0Evgc+5E+jg==\n",
+    "version": 3,
+    "cipher": "aes-256-gcm"
+  }
+}
